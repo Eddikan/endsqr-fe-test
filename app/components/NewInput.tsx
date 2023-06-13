@@ -35,7 +35,7 @@ export default function Input({
             fieldType === "password" ? (open ? "text" : fieldType) : fieldType
           }
           name={name}
-          onChange={() => {
+          onChange={(e) => {
             onChange && onChange(e.target.value);
           }}
           id={name}

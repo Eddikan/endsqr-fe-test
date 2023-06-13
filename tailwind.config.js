@@ -16,6 +16,7 @@ module.exports = {
         dashboardBold: "#213F7D",
         dashboardBackground: "#FBFBFB",
         tableBorder:"#E9ECF2",
+        paginationDropdown:"#E5E8EE",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Page() {
   const router = useRouter();
   return (
-    <div className=" max-w-[90vw]">
+    <div className=" max-w-[90vw] max-h-screen overflow-auto">
       {/* backwards navigation  */}
       <div className="flex">
         <div

@@ -1,0 +1,37 @@
+$primary: #39cdcc;
+$secondary: #213f7d;
+$lightGrey: #545f7d;
+.primary {
+  color: $primary;
+}
+.secondary {
+  color: $secondary;
+}
+.light-grey {
+  color: $lightGrey;
+}
+.dashboard-layout {
+  height: 100vh;
+  width: 100vw;
+}
+.navbar {
+  background: #ffffff;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+}
+.dashboard-card {
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  @layer text-dashboard;
+  @apply text-sm;
+}
+
+table tr td {
+  @apply border-b border-tableBorder pb-5;
+}
+table thead tr th {
+  @apply pr-3 sm:pr-0 whitespace-nowrap
+}
+table tr td{
+  @apply pr-3 sm:pr-0 whitespace-nowrap
+}

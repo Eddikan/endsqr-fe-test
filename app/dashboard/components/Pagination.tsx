@@ -6,7 +6,7 @@ export default function Pagination() {
   const [value, setValue] = useState(100);
 
   return (
-    <div className="flex items-center justify-between text-dashboard">
+    <div className="flex flex-wrap items-center justify-center sm:justify-between gap-5 text-dashboard">
       <div className="flex items-center gap-2">
         <p>Showing</p>
         <div

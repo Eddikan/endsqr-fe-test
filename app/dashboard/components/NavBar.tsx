@@ -15,7 +15,7 @@ export default function NavBar({ toggleSideBar }: Props) {
         <Image src="/logo.svg" fill alt="logo" />
       </div>
 
-      <div className="hidden sm:block">
+      <div className="hidden sm:block mr-72">
         <SearchComponent
           onSearch={(e: string) => {
             console.log("search", e);

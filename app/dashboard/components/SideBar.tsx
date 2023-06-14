@@ -4,8 +4,9 @@ import "../../global.scss";
 
 interface Props {
   showMobile: boolean;
+  noMobile: () => void;
 }
-export default function SideBar({ showMobile }: Props) {
+export default function SideBar({ showMobile, noMobile }: Props) {
   const routes = [
     {
       name: "customers",
@@ -164,6 +165,10 @@ export default function SideBar({ showMobile }: Props) {
         className={`fixed z-10 top-0  flex sm:hidden flex-col pt-10 navbar pr-3 ease-in-out duration-300 max-h-[100vh] overflow-auto  ${
           showMobile ? " -left-0 " : " -left-60 "
         }`}
+        tabIndex={0}
+        onBlur={() => {
+          noMobile();
+        }}
       >
         <div className="flex cursor-pointer gap-x-3 items-center pl-3">
           <div>
@@ -174,7 +179,14 @@ export default function SideBar({ showMobile }: Props) {
               alt="logo"
             />
           </div>
-          <p className="text-[#213F7D]">Switch Organisation</p>
+          <p
+            className="text-[#213F7D]"
+            onClick={() => {
+              noMobile();
+            }}
+          >
+            Switch Organisation
+          </p>
           <div>
             <Image
               src={"/down-arrow-2.svg"}
@@ -184,7 +196,12 @@ export default function SideBar({ showMobile }: Props) {
             />
           </div>
         </div>
-        <div className="flex cursor-pointer gap-x-3 items-center mt-10 mb-4 pl-3">
+        <div
+          className="flex cursor-pointer gap-x-3 items-center mt-10 mb-4 pl-3"
+          onClick={() => {
+            noMobile();
+          }}
+        >
           <div>
             <Image src={"/dashboard.svg"} height={18} width={18} alt="logo" />
           </div>
@@ -200,6 +217,9 @@ export default function SideBar({ showMobile }: Props) {
                 <div
                   key={subIndex}
                   className="flex pl-3 cursor-pointer gap-x-3 items-center mb-2 py-1 hover:bg-secondaryText hover:border-l-4 hover:border-navActive"
+                  onClick={() => {
+                    noMobile();
+                  }}
                 >
                   <div>
                     <Image

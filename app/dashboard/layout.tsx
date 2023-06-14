@@ -14,12 +14,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       />
       <div className="flex   ">
         <div className=" sm:w-[20%] bg-white">
-          <SideBar showMobile={showMobile} />
+          <SideBar
+            showMobile={showMobile}
+            noMobile={() => setShowMobile(false)}
+          />
         </div>
         <div
-          className=" sm:w-[80%] px-5 sm:px-8
-        bg-dashboardBackground
-        "
+          className={` sm:w-[80%] px-5 sm:px-8
+        bg-dashboardBackground 
+         ${showMobile ? " blur-sm " : " "} `}
+         onClick={()=>setShowMobile(false)}
         >
           {children}
         </div>

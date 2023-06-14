@@ -24,7 +24,7 @@ export default function Page() {
       <div className="flex justify-between mt-6">
         <div className="text-dashboardBold text-2xl">User Details</div>
         <div className="flex gap-2 md:gap-4">
-          <div className="border border-[#E51547] text-[#E4033B] p-2 rounded-md text-sm">
+          <div className="cursor-pointer border border-[#E51547] text-[#E4033B] p-2 rounded-md text-sm">
             Blacklist User
           </div>
 

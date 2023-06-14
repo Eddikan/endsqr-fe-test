@@ -14,14 +14,16 @@ export default function TripleDots() {
     >
       <div
         className="relative h-4 w-4 cursor-pointer"
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
           setShowOptions(!showOptions);
         }}
       >
         <Image src="/tripleDots.svg" alt="dots" fill />
       </div>{" "}
       {showOptions && (
-        <div className=" z-10 absolute top-6 right-10 bg-white flex flex-col ">
+        <div className=" z-10 absolute top-6 right-7 bg-white flex flex-col ">
           <div
             id="dropdown"
             className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-36 dark:bg-gray-700"

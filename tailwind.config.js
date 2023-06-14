@@ -18,6 +18,7 @@ module.exports = {
         tableBorder:"#E9ECF2",
         paginationDropdown:"#E5E8EE",
         userText:"#39CDCC",
+        filterColor:"#D3D9E5"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
